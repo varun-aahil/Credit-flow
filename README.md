@@ -2,6 +2,8 @@
 
 **CreditFlow** is a digital lending platform designed to provide quick, accessible loans to Micro, Small, and Medium Enterprises (MSMEs). Our platform offers an easy-to-use interface for businesses to apply for loans, calculate EMIs, and check eligibility for various financial products tailored to MSME needs.
 
+##NOTE THAT THIS PROJECT IS INCOMPLETE, FEEL FREE TO FORK
+
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
