@@ -1,6 +1,6 @@
 # CreditFlow - Business Loan Application Platform
 
-## NOTE THAT THIS PROJECT IS INCOMPLETE, FEEL FREE TO FORK
+### NOTE THAT THIS PROJECT IS INCOMPLETE, FEEL FREE TO FORK
 
 ## Overview
 
