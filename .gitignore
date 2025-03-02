@@ -1,0 +1,18 @@
+# Ignore VS Code settings and extensions
+.vscode/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment folders
+venv/
+.env/
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CreditFlow</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/lucide:building-2.svg" alt="Logo" class="logo-icon">
+                <span>CreditFlow</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="signup-container">
+        <div class="signup-card">
+            <div class="signup-header">
+                <h1>Create Account</h1>
+                <p>Sign up to manage your MSME loan account</p>
+            </div>
+            
+            <form class="signup-form" id="signupForm" method="post" action="/signup">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <img src="https://api.iconify.design/lucide:mail.svg" alt="Email">
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <img src="https://api.iconify.design/lucide:lock.svg" alt="Password">
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full signup-button">Sign Up</button>
+            </form>
+
+            <div class="signup-footer">
+                <p>Already have an account? <a href="login.html" class="text-primary">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/signup.js"></script>
+</body>
+</html>

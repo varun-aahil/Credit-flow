@@ -1,0 +1,147 @@
+.kyc-verification {
+  padding-top: 5rem;
+  min-height: 100vh;
+  background-color: var(--gray-50);
+}
+
+.kyc-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.form-header img {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-color);
+}
+
+.form-header h1 {
+  font-size: 1.5rem;
+  color: var(--gray-900);
+}
+
+.verification-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.verification-status img {
+  width: 20px;
+  height: 20px;
+}
+
+.verification-status.pending {
+  background-color: #fff7ed;
+  color: #9a3412;
+}
+
+.verification-status.pending img {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.document-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--gray-50);
+  border-radius: 0.75rem;
+}
+
+.document-section h2 {
+  font-size: 1.25rem;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.document-upload {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.upload-box {
+  border: 2px dashed var(--gray-200);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-box:hover {
+  border-color: var(--primary-color);
+  background-color: #f8fafc;
+}
+
+.upload-box img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+  color: var(--gray-400);
+}
+
+.upload-box span {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.consent-section {
+  margin: 2rem 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+.checkbox-container input {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--gray-300);
+  cursor: pointer;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

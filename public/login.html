@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CreditFlow</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/lucide:building-2.svg" alt="Logo" class="logo-icon">
+                <span>CreditFlow</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Login to access your MSME loan account</p>
+            </div>
+            
+            <form class="login-form" id="loginForm" method="post" action="/login">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <img src="https://api.iconify.design/lucide:mail.svg" alt="Email">
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <img src="https://api.iconify.design/lucide:lock.svg" alt="Password">
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="signup.html" class="text-primary">Register now</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

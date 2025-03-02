@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditFlow - KYC Verification</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/kyc.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/building-2.svg" alt="CreditFlow Logo">
+                <span>CreditFlow</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kyc-verification">
+        <div class="container">
+            <div class="kyc-form">
+                <div class="form-header">
+                    <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-check.svg" alt="Verify">
+                    <h1>KYC Verification</h1>
+                </div>
+
+                <div class="verification-status pending">
+                    <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/loader.svg" alt="Pending">
+                    <span>Verification Status: <strong>Pending</strong></span>
+                </div>
+
+                <form id="kycForm" enctype="multipart/form-data" action="/kyc" method="post">
+                    <div class="document-section">
+                        <h2>Identity Verification</h2>
+                        
+                        <div class="form-group">
+                            <label for="idType">Select ID Type</label>
+                            <select id="idType" name="idType" required>
+                                <option value="">Choose document type</option>
+                                <option value="aadhaar">Aadhaar Card</option>
+                                <option value="pan">PAN Card</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idNumber">Document Number</label>
+                            <input type="text" id="idNumber" name="idNumber" required 
+                                   pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}|[0-9]{12}" 
+                                   title="Enter valid PAN (ABCDE1234F) or Aadhaar (12 digits)">
+                        </div>
+
+                        <div class="document-upload">
+                            <div class="upload-box" id="frontUpload">
+                                <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/upload.svg" alt="Upload">
+                                <span>Upload Front Side</span>
+                                <input type="file" accept="image/*" name="frontSide" required>
+                            </div>
+                            <div class="upload-box" id="backUpload">
+                                <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/upload.svg" alt="Upload">
+                                <span>Upload Back Side</span>
+                                <input type="file" accept="image/*" name="backSide" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-section">
+                        <h2>Additional Verification</h2>
+                        <div class="form-group">
+                            <label for="selfie">Upload Selfie</label>
+                            <div class="upload-box" id="selfieUpload">
+                                <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/camera.svg" alt="Selfie">
+                                <span>Take or Upload Selfie</span>
+                                <input type="file" accept="image/*" name="selfie" required capture="user">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="consent-section">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            I confirm that all provided information and documents are genuine
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Submit for Verification</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/kyc-validation.js"></script>
+    <script src="./js/kyc-upload.js"></script>
+</body>
+</html>

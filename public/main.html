@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditFlow - MSME Loans</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/features.css">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="./css/eligibility.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="logo">
+                <img src="https://api.iconify.design/lucide:building-2.svg" alt="Logo" class="logo-icon">
+                <span>CreditFlow</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="form.html"><button class="btn-primary">Apply Now</button></a></li>
+            </ul>
+            <button class="mobile-menu">
+                <img src="https://api.iconify.design/lucide:menu.svg" alt="Menu">
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Quick Business Loans for Your MSME Growth</h1>
+                    <p>Get instant access to working capital with our hassle-free digital lending platform. 
+                       Approval in 24 hours, minimal documentation.</p>
+                    <ul class="features-list">
+                        <li>
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            Loans up to ₹2 Crore
+                        </li>
+                        <li>
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            Flexible repayment options
+                        </li>
+                        <li>
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            No collateral required
+                        </li>
+                        <li>
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            Competitive interest rates
+                        </li>
+                    </ul>
+                    <a href="form.html">
+                        <button class="btn-primary btn-large">
+                            Apply Now
+                            <img src="https://api.iconify.design/lucide:arrow-right.svg" alt="Arrow">
+                        </button>
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Business Growth">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose CreditFlow?</h2>
+                    <p>We understand the unique needs of MSMEs and provide tailored financial solutions 
+                       to help your business grow.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://api.iconify.design/lucide:clock.svg" alt="Quick">
+                        <h3>Quick Processing</h3>
+                        <p>24-hour approval with minimal documentation requirements</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://api.iconify.design/lucide:calculator.svg" alt="Flexible">
+                        <h3>Flexible Terms</h3>
+                        <p>Customized loan amounts and repayment schedules</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://api.iconify.design/lucide:badge-check.svg" alt="Simple">
+                        <h3>Simple Eligibility</h3>
+                        <p>Transparent criteria based on business performance</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://api.iconify.design/lucide:coins.svg" alt="Rates">
+                        <h3>Competitive Rates</h3>
+                        <p>Interest rates tailored to your business profile</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <div class="container">
+                <div class="calculator-card">
+                    <div class="calculator-header">
+                        <img src="https://api.iconify.design/lucide:calculator.svg" alt="Calculator">
+                        <h2>Loan Calculator</h2>
+                    </div>
+                    <div class="calculator-grid">
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label>Loan Amount (₹)</label>
+                                <input type="range" min="100000" max="20000000" value="500000" id="loanAmount">
+                                <div class="amount-display">₹5,00,000</div>
+                            </div>
+                            <div class="input-group">
+                                <label>Tenure (months)</label>
+                                <input type="range" min="3" max="36" value="12" id="loanTenure">
+                                <div class="tenure-display">12 months</div>
+                            </div>
+                            <div class="input-group">
+                              <label>Interest(%)</label>
+                              <input type="range" min="1" max="36" value="12" id="loanIntrest">
+                              <div class="intrest-display">12% p.a.</div>
+                          </div>
+                        </div>
+                        <div class="calculator-summary">
+                            <h3>Loan Summary</h3>
+                            <div class="summary-item">
+                                <span>Monthly EMI</span>
+                                <span class="emi-amount">₹45,000</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Interest Rate</span>
+                                <span class="intrest-amount">12% p.a.</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total Amount</span>
+                                <span class="total-amount">₹5,40,000</span>
+                            </div>
+                            <a href="form.html">
+                                <button class="btn-primary btn-full">Apply Now</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eligibility" class="eligibility">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Eligibility Criteria</h2>
+                    <p>Check if you qualify for our business loans. We've kept our requirements 
+                       simple and transparent.</p>
+                </div>
+                <div class="eligibility-grid">
+                    <div class="eligibility-card">
+                        <h3>Business Age</h3>
+                        <div class="requirement">
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            <span>Minimum 12 months of business operations</span>
+                        </div>
+                        <p>Your business should be actively operating for at least one year</p>
+                    </div>
+                    <div class="eligibility-card">
+                        <h3>Annual Turnover</h3>
+                        <div class="requirement">
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            <span>Minimum ₹10 Lakhs</span>
+                        </div>
+                        <p>Verifiable annual business revenue of ₹10 Lakhs or more</p>
+                    </div>
+                    <div class="eligibility-card">
+                        <h3>Credit Score</h3>
+                        <div class="requirement">
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            <span>Above 650</span>
+                        </div>
+                        <p>Personal or business credit score should be above 650</p>
+                    </div>
+                    <div class="eligibility-card">
+                        <h3>Documentation</h3>
+                        <div class="requirement">
+                            <img src="https://api.iconify.design/lucide:check-circle.svg" alt="Check">
+                            <span>Basic KYC & Business Documents</span>
+                        </div>
+                        <p>Valid KYC, GST registration, bank statements, and ITR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 CreditFlow. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/calculator.js"></script>
+</body>
+
+</html>
