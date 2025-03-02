@@ -30,60 +30,58 @@
 ```bash
 git clone https://github.com/yourusername/creditflow.git
 cd creditflow
-2. Install Dependencies
+```
+### 2. Install Dependencies
 For frontend dependencies:
 
-bash
-Copy
-Edit
+```bash
 cd client
 npm install
+```
 For backend dependencies:
 
-bash
-Copy
-Edit
+```bash
 cd server
 npm install
-3. Setup PostgreSQL Database
+```
+### 3. Setup PostgreSQL Database
 Create a PostgreSQL database and set up your tables according to the required schema for user data and loan applications.
 Update the .env file with your database connection credentials.
 Example .env file:
 
-ini
-Copy
-Edit
+```ini
 DB_HOST=localhost
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_NAME=creditflow_db
 JWT_SECRET=your_jwt_secret
-4. Start the Application
+```
+### 4. Start the Application
 For the backend (Node.js server):
 
-bash
-Copy
-Edit
+```bash
 cd server
 npm start
+```
 For the frontend (static files):
 
-bash
-Copy
-Edit
+```bash
 cd client
 npm start
-Visit http://localhost:3000 in your browser to access the application.
+```
+Visit `http://localhost:3000` in your browser to access the application.
 
-5. Usage
-Login: Sign up or log in using the credentials. After successful login, you’ll be redirected to the homepage.
-Apply for a Loan: Click "Apply Now" on the homepage to start filling out the loan application form.
-Track Loan Status: View the status of your loan application directly on the homepage after submission.
-Notes
-This is a demo version of the platform. Currently, it simulates the loan application process and provides suggestions based on input fields.
-The backend supports JWT authentication for user sessions and protects routes using token verification.
-Loan suggestions are basic and can be enhanced with advanced credit scoring models and integrations with financial institutions.
-Future Improvements
-Integration with real financial APIs to provide actual loan options.
-Implement detailed credit scoring algorithms based on a wider range of parameters.
-Expand the document upload and verification process to ensure a secure and seamless user experience.
+### 5. Usage
+* Login: Sign up or log in using the credentials. After successful login, you’ll be redirected to the homepage.
+* Apply for a Loan: Click "Apply Now" on the homepage to start filling out the loan application form.
+* Track Loan Status: View the status of your loan application directly on the homepage after submission.
+
+## Notes
+* This is a demo version of the platform. Currently, it simulates the loan application process and provides suggestions based on input fields.
+* The backend supports JWT authentication for user sessions and protects routes using token verification.
+* Loan suggestions are basic and can be enhanced with advanced credit scoring models and integrations with financial institutions.
+
+## Future Improvements
+* Integration with real financial APIs to provide actual loan options.
+* Implement detailed credit scoring algorithms based on a wider range of parameters.
+* Expand the document upload and verification process to ensure a secure and seamless user experience.
