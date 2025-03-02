@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broken Form Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <div class="error" id="usernameError">Username must be at least 3 characters</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="emailError">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <div class="error" id="passwordError">Password must be at least 6 characters</div>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        // Intentionally broken validation function
+        function validateUsername(username) {
+            // This will cause a console error because userName is undefined
+            if (userName.length < 3) {
+                return false;
+            }
+            return true;
+        }
+
+        // Broken email validation
+        function validateEmail(email) {
+            // This regex is intentionally incorrect
+            return /^[a-z]+$/.test(email);
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // This will try to validate and show errors
+                if (!validateUsername(username)) {
+                    document.getElementById('usernameError').style.display = 'block';
+                    console.error('Username validation failed');
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    document.getElementById('emailError').style.display = 'block';
+                    console.error('Email validation failed');
+                    return;
+                }
+
+                // Attempt to submit to a non-existent endpoint
+                const response = await fetch('/api/non-existent-endpoint/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, email, password })
+                });
+
+                const data = await response.json();
+                console.log('Response:', data);
+            } catch (error) {
+                console.error('Submission failed:', error);
+            }
+        });
+    </script>
+</body>
+</html> 

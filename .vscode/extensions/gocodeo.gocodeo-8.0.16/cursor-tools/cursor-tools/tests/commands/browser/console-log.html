@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console Log Test</title>
+</head>
+<body>
+    <h1>Console Log Test Page</h1>
+    <script>
+        // Log different types of messages
+        console.log('Basic log message');
+        console.info('Info message');
+        console.warn('Warning message');
+        console.error('Error message');
+        
+        // Log with different data types
+        console.log('Object:', { name: 'test', value: 123 });
+        console.log('Array:', [1, 2, 3, 4, 5]);
+        
+        // Log after a delay to ensure browser capture
+        setTimeout(() => {
+            console.log('Delayed message after 1 second');
+        }, 1000);
+    </script>
+</body>
+</html>

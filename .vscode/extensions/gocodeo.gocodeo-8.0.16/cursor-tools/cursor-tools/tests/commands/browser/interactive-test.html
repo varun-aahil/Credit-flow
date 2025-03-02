@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Elements Test</title>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; }
+        button { padding: 8px 16px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Elements Test Page</h1>
+        
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="remember"> Remember me
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="role">Select Role:</label>
+            <select id="role">
+                <option value="">Choose a role...</option>
+                <option value="admin">Administrator</option>
+                <option value="user">Regular User</option>
+                <option value="guest">Guest</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <button onclick="handleLogin()">Login</button>
+            <button onclick="handleReset()">Reset</button>
+            <a href="#" onclick="showHelp()">Need Help?</a>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin() {
+            console.log('Login clicked');
+        }
+        
+        function handleReset() {
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('remember').checked = false;
+            document.getElementById('role').selectedIndex = 0;
+        }
+        
+        function showHelp() {
+            alert('Help information will be displayed here');
+        }
+    </script>
+</body>
+</html> 

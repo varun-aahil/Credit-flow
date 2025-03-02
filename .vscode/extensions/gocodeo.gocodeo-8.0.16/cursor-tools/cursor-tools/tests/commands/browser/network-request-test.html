@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Test</title>
+    <!-- This favicon doesn't exist but it turns out that playwright can't see the error related to favicons not being found, but we don't care about favicons that much -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <h1>Favicon Test Page</h1>
+    <img src="/non-existent-image.png" alt="This image should not exist">
+    <img src="also-missing.jpg" alt="This one too">
+</body>
+</html>

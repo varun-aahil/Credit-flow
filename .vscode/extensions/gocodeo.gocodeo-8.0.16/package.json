@@ -1,0 +1,499 @@
+{
+	"name": "gocodeo",
+	"version": "8.0.16",
+	"engines": {
+		"vscode": "^1.95.0"
+	},
+	"publisher": "GoCodeo",
+	"displayName": "GoCodeo: The Ultimate AI Coding Agent",
+	"icon": "build/logoonly.png",
+	"description": "GoCodeo is an AI agent for building full-stack apps in minutes. It lets you build and deploy full-stack apps effortlessly, with one click Vercel deployment and seamless Supabase integration. Built on cutting-edge AI models, GoCodeo ensures intelligent, high-quality code generation at every step.",
+	"pricing": "Free",
+	"homepage": "https://gocodeo.com",
+	"keywords": [
+		"unit-testing",
+		"generative-ai",
+		"developer tools",
+		"openai",
+		"chatgpt",
+		"gpt-4",
+		"python",
+		"javascript",
+		"code-coverage",
+		"code-refactoring",
+		"ai",
+		"ai code snippets",
+		"AI copilot",
+		"AI-assisted code completion",
+		"AI-powered code completion",
+		"autocomplete",
+		"automated testing",
+		"bash",
+		"chatbot",
+		"chat",
+		"code completion",
+		"code generation",
+		"code hinting",
+		"code prediction",
+		"code suggestion",
+		"code-integrity",
+		"coding ai",
+		"coding assistant",
+		"content assist",
+		"cpp",
+		"csharp",
+		"css",
+		"docstring",
+		"generate",
+		"git",
+		"gocodeo",
+		"golang",
+		"gpt-3",
+		"html",
+		"intellicode",
+		"intellisense",
+		"java",
+		"jupyter",
+		"keybindings",
+		"kotlin",
+		"method completion",
+		"node",
+		"node.js",
+		"nodejs",
+		"objectivec",
+		"objective-c",
+		"ocaml",
+		"perl",
+		"php",
+		"react",
+		"refactor",
+		"ruby",
+		"rust",
+		"snippets",
+		"swift",
+		"test",
+		"typescript",
+		"unit test generation",
+		"anthropic",
+		"assistant",
+		"bot",
+		"claude",
+		"code analysis",
+		"codegen",
+		"gemini",
+		"llm",
+		"model",
+		"llama"
+	],
+	"categories": [
+		"Testing",
+		"Machine Learning",
+		"Data Science",
+		"Snippets",
+		"Programming Languages",
+		"AI",
+		"Chat"
+	],
+	"activationEvents": [
+		"*",
+		"onView:gocodeo-sidebar",
+		"onLanguage:python",
+		"onLanguage:javascript",
+		"onLanguage:typescript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescriptreact",
+		"onNotebook:python-notebook"
+	],
+	"main": "./build/ext-src/extension",
+	"productIconPath": "./build/logoonly.png",
+	"repository": {},
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "gocodeo-sidebar-view",
+					"title": "GoCodeo",
+					"icon": "./build/logoonly.png"
+				}
+			]
+		},
+		"views": {
+			"gocodeo-sidebar-view": [
+				{
+					"id": "gocodeo-sidebar",
+					"name": "GoCodeo",
+					"icon": "./build/logoonly.png"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "gocodeo-sidebar",
+				"contents": "Welcome to GoCodeo! , Start building today.\n\nLogin to GoCodeo to get started!\n\n[Login](command:gocodeo.login)\n[Watch Tutorial](command:gocodeo.watchTutorial)"
+			}
+		],
+		"commands": [
+			{
+				"command": "gocodeo.supabaseLogin",
+				"title": "Login with Supabase"
+			},
+			{
+				"command": "gocodeo.debugTerminal",
+				"title": "Debug Error with GoCodeo",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.openTerminalChat",
+				"title": "Ask for a command",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.generateUnitTests",
+				"title": "Generate Unit Tests",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.generateTestsByClick",
+				"title": "Generate Unit Tests",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.signin",
+				"title": "Signin",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.provideAuthenticationToken",
+				"title": "Provide Authentication Token",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.getStarted",
+				"title": "Get Started",
+				"category": "GoCodeo",
+				"icon": "$(question)"
+			},
+			{
+				"command": "gocodeo.login",
+				"title": "Login",
+				"category": "GoCodeo",
+				"icon": "$(key)"
+			},
+			{
+				"command": "gocodeo.watchTutorial",
+				"title": "Watch Tutorial",
+				"category": "GoCodeo",
+				"icon": "$(play)"
+			},
+			{
+				"command": "gocodeo.generateDocstringsByClick",
+				"title": "Generate Docstrings",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.generateExplainByClick",
+				"title": "Explain Code",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.generateAnswerByClick",
+				"title": "Ask a Question",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.updateSidebarContent",
+				"title": "Update Sidebar Content",
+				"category": "GoCodeo"
+			},
+			{
+				"command": "gocodeo.askChat",
+				"title": "Ask Chat"
+			},
+			{
+				"command": "gocodeo.builder",
+				"title": "Build"
+			},
+			{
+				"command": "gocodeo.openWalkthrough",
+				"title": "Open GoCodeo Walkthrough"
+			},
+			{
+				"command": "gocodeo.refreshSidebar",
+				"title": "Refresh Sidebar",
+				"category": "GoCodeo"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+shift+k",
+				"command": "gocodeo.builder",
+				"win": "ctrl+shift+k"
+			},
+			{
+				"key": "cmd+shift+k",
+				"command": "gocodeo.builder",
+				"mac": "cmd+shift+k"
+			},
+			{
+				"key": "ctrl+shift+l",
+				"command": "gocodeo.askChat",
+				"win": "ctrl+shift+l"
+			},
+			{
+				"key": "cmd+shift+l",
+				"command": "gocodeo.askChat",
+				"mac": "cmd+shift+l"
+			},
+			{
+				"key": "ctrl+shift+e",
+				"command": "gocodeo.editSelectedCode",
+				"win": "ctrl+shift+e"
+			},
+			{
+				"key": "cmd+shift+e",
+				"command": "gocodeo.editSelectedCode",
+				"mac": "cmd+shift+e"
+			},
+			{
+				"key": "ctrl+shift+t",
+				"command": "gocodeo.openTerminalChat",
+				"win": "ctrl+shift+t"
+			},
+			{
+				"key": "cmd+shift+t",
+				"command": "gocodeo.openTerminalChat",
+				"mac": "cmd+shift+t"
+			},
+			{
+				"key": "ctrl+shift+d",
+				"command": "gocodeo.debugTerminal",
+				"win": "ctrl+shift+d"
+			},
+			{
+				"key": "cmd+shift+d",
+				"command": "gocodeo.debugTerminal",
+				"mac": "cmd+shift+d"
+			}
+		],
+		"configuration": {
+			"title": "GoCodeo",
+			"properties": {
+				"gocodeo.hideWelcome": {
+					"type": "boolean",
+					"default": false,
+					"description": "Hide the GoCodeo welcome UI"
+				},
+				"gocodeo.jsTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your Js and Ts Test Framework"
+				},
+				"gocodeo.pythonTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your python Test Framework"
+				},
+				"gocodeo.javaTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your Java Test Framework"
+				},
+				"gocodeo.csharpTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your C# Test Framework"
+				},
+				"gocodeo.cppTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your C++ Test Framework"
+				},
+				"gocodeo.phpTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your php Test Framework"
+				},
+				"gocodeo.supabaseAccessToken": {
+					"type": "string",
+					"default": null,
+					"description": "Your Supabase Access Token"
+				},
+				"gocodeo.supabaseRefreshToken": {
+					"type": "string",
+					"default": null,
+					"description": "Your Supabase Refresh Token"
+				},
+				"gocodeo.rustTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your Rust Test Framework"
+				},
+				"gocodeo.rubyTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your Ruby Test Framework"
+				},
+				"gocodeo.goTestFramework": {
+					"type": "string",
+					"default": null,
+					"description": "Your Go Test Framework"
+				},
+				"gocodeo.NumberOfTests": {
+					"type": "number",
+					"default": 6,
+					"description": "Number of tests."
+				},
+				"gocodeo.authToken": {
+					"type": "string",
+					"default": null,
+					"description": "Your Auth Token"
+				},
+				"vscodeId": {
+					"type": "string",
+					"default": null
+				}
+			}
+		},
+		"walkthroughs": [
+			{
+				"id": "gocodeo",
+				"title": "GoCodeo",
+				"description": "AI-powered coding and testing for VS Code.",
+				"steps": [
+					{
+						"id": "build",
+						"title": "BUILD: Prompt, Run & Deploy",
+						"description": "- Real-time code generation with modular project structure creation\n- Supports 25+ frontend and backend frameworks\n- Generates essential files like package.json, tsconfig.json, and starter templates instantly\n- One-click deployment to hosting platforms and integration with Supabase\n\n**Tip:** Use keyboard shortcut **Ctrl+Shift+K (Windows)** or **Cmd+Shift+K (Mac)** to quickly access the Build panel.",
+						"media": {
+							"markdown": "walkthrough/build.md"
+						},
+						"completionEvents": [
+							"onCommand:gocodeo.builder"
+						]
+					},
+					{
+						"id": "ask",
+						"title": "ASK: AI-Powered Code Companion",
+						"description": "- AI-powered chat, code explanation and documentation\n- Query support with code and image context\n- Structured chat history for quick reference\n- Smart CLI recommendations and debugging\n\n**Tip:** Use keyboard shortcut **Ctrl+Shift+L (Windows)** or **Cmd+Shift+L (Mac)** to quickly access the Build panel.",
+						"media": {
+							"markdown": "walkthrough/ask.md"
+						},
+						"completionEvents": []
+					},
+					{
+						"id": "test-features",
+						"title": "TEST: Smarter, Faster, and More Reliable Testing",
+						"description": "- Generate production-ready tests in under 30 seconds\n- Debug smarter with AI-driven failure insights\n- Run tests and refine code with context-aware AI suggestions\n- Customize and save reusable test cases\n- One-click **Generate Tests** and **Run Tests** in IDE",
+						"media": {
+							"markdown": "walkthrough/generate-tests.md"
+						},
+						"completionEvents": []
+					}
+				]
+			}
+		],
+		"languages": [
+			{
+				"id": "python",
+				"aliases": [
+					"Python"
+				],
+				"extensions": [
+					".py",
+					".ipynb"
+				]
+			}
+		],
+		"codeLensProviders": [
+			{
+				"language": "python",
+				"scheme": "vscode-notebook-cell",
+				"provider": "./out/JupyterCodeLensProvider"
+			}
+		]
+	},
+	"dependencies": {
+		"@codemirror/autocomplete": "^6.18.1",
+		"@codemirror/lang-javascript": "^6.2.2",
+		"@codemirror/lang-python": "^6.1.6",
+		"@emotion/react": "^11.13.3",
+		"@emotion/styled": "^11.13.0",
+		"@google/generative-ai": "^0.21.0",
+		"@mui/icons-material": "^6.1.5",
+		"@mui/material": "^5.16.7",
+		"@uiw/codemirror-theme-aura": "^4.23.6",
+		"@uiw/codemirror-theme-bbedit": "^4.23.5",
+		"@uiw/codemirror-theme-vscode": "^4.23.6",
+		"@uiw/react-codemirror": "^4.23.5",
+		"ace-builds": "^1.15.0",
+		"axios": "^1.4.0",
+		"bootstrap": "^5.2.3",
+		"child-process-promise": "^2.2.1",
+		"crypto": "^1.0.1",
+		"cryptr": "^6.2.0",
+		"diff": "^5.1.0",
+		"dotenv": "^16.4.7",
+		"esprima": "^4.0.1",
+		"lodash": "^4.17.21",
+		"mammoth": "^1.8.0",
+		"mixpanel": "^0.17.0",
+		"mixpanel-browser": "^2.47.0",
+		"openai": "^4.76.0",
+		"pdfjs-dist": "2.16.105",
+		"postcss-normalize": "^10.0.1",
+		"prettier": "^3.4.2",
+		"python-shell": "^5.0.0",
+		"react": "^16.3.2",
+		"react-ace": "^10.1.0",
+		"react-bootstrap": "^2.7.2",
+		"react-bootstrap-icons": "^1.10.3",
+		"react-copy-to-clipboard": "^5.1.0",
+		"react-dom": "^16.3.2",
+		"react-joyride": "^2.9.3",
+		"react-loader-spinner": "^5.3.4",
+		"react-markdown": "^7.1.2",
+		"socket.io-client": "^4.7.2",
+		"supabase": "^2.1.1",
+		"terser": "^5.15.0",
+		"util": "^0.12.5",
+		"uuid": "^9.0.0",
+		"yarn": "^1.22.19"
+	},
+	"resolutions": {},
+	"scripts": {
+		"vscode:prepublish": "node ./scripts/build-non-split.js && webpack --mode production",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"start": "react-scripts start",
+		"build": "node ./scripts/build-non-split.js && tsc -p tsconfig.extension.json",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"package": "webpack --mode production --devtool hidden-source-map"
+	},
+	"devDependencies": {
+		"@types/jest": "^23.3.13",
+		"@types/lodash": "^4.14.195",
+		"@types/node": "^16.18.46",
+		"@types/pdfjs-dist": "^2.10.378",
+		"@types/react": "^16.3.14",
+		"@types/react-dom": "^16.0.5",
+		"@types/vscode": "^1.95.0",
+		"react-scripts": "^5.0.1",
+		"rewire": "^6.0.0",
+		"ts-loader": "^9.4.3",
+		"typescript": "^4.1.6",
+		"webpack": "^5.84.1",
+		"webpack-cli": "^5.1.1"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"__metadata": {
+		"installedTimestamp": 1740765734147,
+		"size": 23763712
+	}
+}

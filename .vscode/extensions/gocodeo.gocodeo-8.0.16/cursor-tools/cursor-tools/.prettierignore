@@ -1,0 +1,31 @@
+# Dot directories and files
+.*
+.*/
+
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Coverage reports
+coverage/
+
+# Environment files
+.env*
+!.env.example
+
+# Logs & text files
+*.log
+*.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Other
+repomix-output.txt
+src/commands/browser/stagehand/stagehandScript.ts
