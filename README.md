@@ -8,10 +8,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 CreditFlow aims to provide MSMEs with fast, hassle-free access to loans with minimal documentation and competitive interest rates. The platform allows businesses to:
